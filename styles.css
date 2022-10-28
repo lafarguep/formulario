@@ -1,0 +1,202 @@
+
+*{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*SE AGREGÓ ESTE CONTENEDOR GENERAL PARA LOGRAR RESPONSIVE*/
+ .contenedor{
+    width: auto;
+
+    margin:0 auto;
+    overflow: hidden;
+} 
+
+body, header, main, footer {
+    /* border: 3px solid red; */
+    min-height: 50px;
+    min-width: auto;
+    /* margin: 0.5rem; */
+    font-size: 1rem;
+}
+
+body{
+    background-color: rgb(224, 208, 208);
+    background-position: center; 
+}
+/*SE AGREGÓ ESTO AL MAIN PARA LOGRAR RESPONSIVE*/
+main {
+    min-height: 45%;
+    overflow:auto;
+    align-items:left;
+    margin:1rem;
+    
+}
+
+header {
+    box-shadow: 0 0 0.5rem rgb(83 78 76 / 70%);
+    color: hsla(0, 0%, 100%, 1);
+    background-color: hsla(0, 100%, 0%, 1);
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    transition: 1s;
+    position: fixed;
+    width: 100%;
+}
+
+footer {
+    color: hsla(0, 0%, 100%, 1);
+    background-color: hsla(0, 100%, 0%, 1);
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    display: inline-flex;
+}
+
+/* contenido ppal */
+main > div {
+    /* los div hijos directos de un main */
+    min-height: 180px;
+    margin: 0.5px;
+    border: 3px solid white;
+    width: 60%;
+    height: auto;    
+    float: left;
+}
+
+main > aside {
+    /* los aside hijos directos de un main */
+    min-height: 180px;
+    margin: 0.5px;
+    min-width: 25%;
+    width: auto;
+    float: left;
+    border: 3px solid white;
+    /* display: inline-block; */
+}
+
+.portada {
+    width: 100%;
+    height: 100vh;
+    border: 3px solid black;
+    background-image: url(https://cdn.pixabay.com/photo/2016/07/26/16/16/wine-1543170_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    /* z-index: -1; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.portada h1 {
+    border: 3px ;
+    transition: 3s;
+    padding-left: 70%;
+}
+
+.secciones {
+    min-height: auto;
+    margin: 0.5rem;
+    display: inline-block;
+    border: 3px solid white;
+}
+
+.secciones article {    
+    /* las clases a las que se les aplique secciones y cuyos contenido sea un elemento tipo articulo  */
+    border: 3px solid rgb(116, 29, 29);
+    padding-left: 10px;
+    margin: 0.5rem;
+    min-height: 20px;
+}
+
+/* logo y menu */
+.header-logo {
+    border: 3px solid  black;
+    border-radius: 10px;
+    width: auto;
+    display: inline-flex;
+    margin: 0.5rem 0 0.5rem 1.5rem;
+    font-size: 0.7rem;
+    background-color: white;
+    padding: 10px;
+}
+
+.header-menubar {
+    left: auto;
+    position: relative;
+    top: auto;
+    width: auto;
+    display: inline-block;
+    /* border: 2px solid rgb(81, 202, 132); */
+    margin: 0.5rem 0 0.5rem 1rem;
+    font-size: 1.3rem;
+}
+
+.header-menubar ul {
+    list-style: none;
+}
+
+.header-menubar li {
+    border: 2px solid rgb(58, 36, 78);
+    border-radius: 10px;
+    float: left;
+    text-align: center;
+    margin:  0.5rem ;
+    padding: 5px;
+}
+
+.header-menubar a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-menubar a:hover {
+    color: rgb(146, 55, 55);
+}
+
+.sticky{
+    background: hsla(0, 0%, 100%, 1);
+    top: 0.5em;    
+}
+.sticky > nav a{
+    color: hsla(0, 100%, 0%, 1);
+}
+.sticky > div, nav{
+    color: hsla(0, 100%, 0%, 1);
+}
+
+/* Contacto whatsapp */
+.whatsapp {
+    color: hsla(0, 0%, 100%, 0.00000001);
+    position: fixed;
+    width: 90px;
+    height: auto;
+    top: 85%;
+    left: 90%;
+    border: 5px solid blue;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+
+.whatsapp:hover{
+    scale: 1.25;
+}
+/*SE AGREGÓ ESTA MEDIA QUERY PARA LOGRAR RESPONSIVE*/
+@media screen and (max-width: 800px) {
+    .main{
+        width: 100%;
+    }
+    aside{
+        width: 100%;
+    }
+}
+
+/* CODIGO DE GIOR*/
